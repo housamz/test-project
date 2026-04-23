@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Simple Accordion</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+  }
+
+  .accordion-button:hover {
+    background: #ddd;
+  }
+
+  .accordion-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+  }
+
+  .accordion-content.open {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<h2>Accordion Example</h2>
+
+<button class="accordion-button">
+  What is ARIA?
+</button>
+<div class="accordion-content">
+  <p>ARIA helps make web content more accessible to screen readers.</p>
+</div>
+
+<script>
+  const button = document.querySelector('.accordion-button');
+  const content = document.querySelector('.accordion-content');
+
+  button.addEventListener('click', () => {
+
+    content.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
